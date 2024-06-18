@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 
+
 const GlobalStyles= createGlobalStyle`
     html {
     line-height: 1.15; 
     -webkit-text-size-adjust: 100%; 
-    font-family: GandhiSansRegular;
+    font-family: "Montserrat", sans-serif;;
   }
   body {
     margin: 0;
@@ -146,6 +147,8 @@ const GlobalStyles= createGlobalStyle`
   [hidden] {
     display: none;
   }
+
+
 `
 
 
