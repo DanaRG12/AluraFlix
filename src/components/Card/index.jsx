@@ -1,0 +1,1 @@
+//corregir footer, crear cards 

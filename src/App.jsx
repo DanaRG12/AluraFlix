@@ -3,6 +3,7 @@ import GlobalStyles from "./components/GlobalStyles"
 import Cabecera from "./components/Cabecera"
 import Home from './components/Pages/Home';
 import NuevoVideo from './components/Pages/NuevoVideo';
+import Footer from './components/Footer'
 
 const FondoGradiente =  styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -21,6 +22,7 @@ function App() {
     <GlobalStyles/>
     <Cabecera>
     </Cabecera>
+    <Footer/>
     </FondoGradiente>
     </>
   )
