@@ -5,7 +5,8 @@ const FooterEstilizado = styled.footer`
     justify-content: center;
     padding: 60px 80px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     
     h1{
         color: white;
@@ -18,16 +19,18 @@ const FooterEstilizado = styled.footer`
 `
 
     const Footer = () => {
-        return ( <FooterEstilizado>
-
-            <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
-<></>
-        <h1>Desarrollado para Alura 
+        return (
+            
+    <FooterEstilizado>
+        <></>
+        <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
+        <h1>
+        Desarrollado para Alura 
                 <p>
-                por Diana Robles Guerrero
+        por Diana Robles Guerrero
                 </p>
         </h1>
-            </FooterEstilizado>
+     </FooterEstilizado>
         )
     }
 

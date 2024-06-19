@@ -57,15 +57,13 @@ const Cabecera = () => {
     return (
         <Router>
     <HeaderEstilizado>
-
-        
-        
+   
      <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
  
               <Nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/NuevoVideo">Nuevo Video</NavLink>
-        </Nav>
+              </Nav>
      </HeaderEstilizado>
       <Routes>
         <Route path="/" element={<Home />} />
