@@ -42,22 +42,17 @@ const Cardstyle = styled.div`
 const Card = () => {
     return (
        <CardContainer>
-        <img src="src\img\FrontEnd.png" alt="logo aluraFix"/>
+        <img src="src\img\FrontEnd.png" alt="Frontend"/>
               <Cardstyle>Card 1</Cardstyle>
-              <Cardstyle>Cardstyle 2</Cardstyle>
+        <img src="src\img\BackEnd.png" alt="Backend"/>
+                <Cardstyle>Cardstyle 2</Cardstyle>
+                <img src="src\img\Innova.png" alt="Innovación y gestión"/>        
               <Cardstyle>Cardstyle 3</Cardstyle>
               
         </CardContainer>
  
     );
   }
-
-
-
-
-
-
-
 
 
 export default Card;
