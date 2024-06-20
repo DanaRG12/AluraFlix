@@ -5,7 +5,7 @@ import Home from './components/Pages/Home';
 import NuevoVideo from './components/Pages/NuevoVideo';
 import Footer from './components/Footer'
 
-import Editar from "./components/Modal/Editar";
+//import Editar from "./components/Modal/Editar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const FondoGradiente =  styled.div`
@@ -22,11 +22,14 @@ function App() {
   return (
     <>
     <FondoGradiente>
+
     <GlobalStyles/>
     <Cabecera>
-    </Cabecera>
-
-
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=".Pages/NuevoVideo" element={<NuevoVideo />} />
+    </Routes>
+      </Cabecera>
     <Footer/>
     
     </FondoGradiente>

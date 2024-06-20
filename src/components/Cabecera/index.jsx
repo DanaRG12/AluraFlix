@@ -17,13 +17,6 @@ const HeaderEstilizado = styled.header`
         width: 212px;
     }
 `
-const Header = styled.header`
-  background-color: #000000;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-`;
 
 const Nav = styled.nav`
   display: flex;
@@ -67,7 +60,7 @@ const Cabecera = () => {
      </HeaderEstilizado>
      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path=".Pages/NuevoVideo" element={<NuevoVideo />} />
+        <Route path="../Pages/NuevoVideo" element={<NuevoVideo />} />
     </Routes>
 
 

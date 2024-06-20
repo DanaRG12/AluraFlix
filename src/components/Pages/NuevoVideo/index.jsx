@@ -1,6 +1,12 @@
+import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
+import CampoTexto from "../../CampoTexto"; 
+import ListaOpciones from "../../ListaOpciones"; 
+import Boton from "../../Boton"; 
+//crear conecion con app
 
-const NuevoContainer = styled.div`
+const formulario = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,20 +15,79 @@ const NuevoContainer = styled.div`
     text-align: center;
 `;
 
+const NuevoVideo = () => {
+
+    const [titulo, actualizarTitulo] = useState("")
+    const [categoria, actualizarCategoria] = useState("")
+    const [imagen, actualizarImagen] = useState("")
+    const [video, actualizarVideo] = useState("")
+    const [descripcion, actualizarDescripcion] = useState("")
+
+    const manejarEnvio = (e) => {
+        e.preventDefault()
+        console.log("Manejar el envio")
+        let datosAEnviar = {
+            titulo,
+            categoria,
+            imagen,
+            video,
+            descripcion
+        }
+        console.log(datosAEnviar)
+    }
 
 
-function NuevoVideo() {
-  return (
-    <NuevoContainer>
-    <form>
-      <label>Aquí puedes agregar un nuevo video.
-        <input type="text" />
-      </label>
-    </form>
-    </NuevoContainer>
-  )
+      return ( 
+      <section className="NuevoVideo">
+        <form onSubmit={manejarEnvio}>
+            <h2>Nuevo Video</h2>
+            <h3>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VIDEO</h3>
+            <h4>Crear Tarjeta</h4>
+            <CampoTexto
+                titulo="Título"
+                placeholder="Ingresar el título"
+                required
+                valor={titulo}
+                actualizarValor={actualizarTitulo}
+            />
+            <ListaOpciones
+                titulo="Categoría"
+                placeholder="Ingresar Categoría"
+                required
+                valor={categoria}
+                actualizarValor={actualizarCategoria}
+            />
+            <CampoTexto
+                titulo="Imagen"
+                placeholder="Ingresar enlace de Imagen (obligatorio)"
+                required
+                valor={imagen}
+                actualizarValor={actualizarImagen}
+            />
+            <CampoTexto
+                titulo="Video"
+                placeholder="Ingresar el enlace del video"
+                required
+                valor={video}
+                actualizarValor={actualizarVideo}
+            />
+            <CampoTexto
+                titulo="Descripción"
+                placeholder="¿De qué se trata este video?"
+                required
+                valor={descripcion}
+                actualizarValor={actualizarDescripcion}
+            />
+
+            <Boton>
+                Guardar
+            </Boton>
+            <Boton>
+                Limpiar
+            </Boton>
+        </form>
+    </section>
+      )
 }
-//const root = ReactDOM.createRoot(document.getElementById('root'));
-//root.render(<NuevoVideo />);
 
-export default NuevoVideo;
+export default NuevoVideo

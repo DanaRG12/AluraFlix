@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+//hacer flexibles los colores depurar stylos probar con una db
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,9 +16,7 @@ const CardContainer = styled.div`
 `;
 
 const Cardstyle = styled.div`
- background: rgb(0,212,255);
     background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);
-
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -43,7 +43,7 @@ const Card = () => {
     return (
        <CardContainer>
         <img src="src\img\FrontEnd.png" alt="Frontend"/>
-              <Cardstyle>Card 1</Cardstyle>
+              <Cardstyle></Cardstyle>
         <img src="src\img\BackEnd.png" alt="Backend"/>
                 <Cardstyle>Cardstyle 2</Cardstyle>
                 <img src="src\img\Innova.png" alt="Innovación y gestión"/>        
