@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-
+import Card from "../../Card/index.jsx";
 
 const HomeContainer = styled.div`
     display: flex;
@@ -16,15 +16,11 @@ const Image = styled.img`
     margin-bottom: 20px;
 `;
 
-
-
-
-
 const Home = () => {
   return (
       <HomeContainer>
           <Image src="src\img\BannerMain.png" alt="Bannere" />
-          
+          <Card/>
       </HomeContainer>
   );
 }

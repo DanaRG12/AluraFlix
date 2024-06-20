@@ -9,25 +9,20 @@ const NuevoContainer = styled.div`
     text-align: center;
 `;
 
-const Image = styled.img`
-    width: 85%; 
-    margin-bottom: 20px;
-`;
 
 
-
-
-
-const NuevoVideo = () => {
+function NuevoVideo() {
   return (
     <NuevoContainer>
-    <div>
-      <h1>Nuevo Video</h1>
-      <Image src="src\img\BannerMain.png" alt="Bannere" />
-      <p>Aquí puedes agregar un nuevo video.</p>
-    </div>
+    <form>
+      <label>Aquí puedes agregar un nuevo video.
+        <input type="text" />
+      </label>
+    </form>
     </NuevoContainer>
-  );
-};
+  )
+}
+//const root = ReactDOM.createRoot(document.getElementById('root'));
+//root.render(<NuevoVideo />);
 
 export default NuevoVideo;

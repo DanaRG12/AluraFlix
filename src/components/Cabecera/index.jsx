@@ -65,10 +65,10 @@ const Cabecera = () => {
           <NavLink to="/NuevoVideo">Nuevo Video</NavLink>
               </Nav>
      </HeaderEstilizado>
-      <Routes>
+     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="./NuevoVideo" element={<NuevoVideo />} />
-      </Routes>
+        <Route path=".Pages/NuevoVideo" element={<NuevoVideo />} />
+    </Routes>
 
 
      </Router>   

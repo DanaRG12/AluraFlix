@@ -4,7 +4,9 @@ import Cabecera from "./components/Cabecera"
 import Home from './components/Pages/Home';
 import NuevoVideo from './components/Pages/NuevoVideo';
 import Footer from './components/Footer'
-import CardContainer from "./components/Card";
+
+import Editar from "./components/Modal/Editar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const FondoGradiente =  styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -23,8 +25,10 @@ function App() {
     <GlobalStyles/>
     <Cabecera>
     </Cabecera>
-    <CardContainer/>
+
+
     <Footer/>
+    
     </FondoGradiente>
     </>
   )
