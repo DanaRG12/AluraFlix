@@ -11,8 +11,6 @@ const HeaderEstilizado = styled.header`
     align-items: end;
     justify-content: space-between;
    padding: 60px 80px;
-   display: flex;
-
     img{
         width: 212px;
     }
@@ -24,7 +22,7 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-color: #fff;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
   padding: 10px 20px;
@@ -48,7 +46,7 @@ color: #fff;
 
 const Cabecera = () => {
     return (
-        <Router>
+
     <HeaderEstilizado>
    
      <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
@@ -58,14 +56,10 @@ const Cabecera = () => {
           <NavLink to="/NuevoVideo">Nuevo Video</NavLink>
               </Nav>
      </HeaderEstilizado>
-     <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="../Pages/NuevoVideo" element={<NuevoVideo />} />
-    </Routes>
 
 
-     </Router>   
     )
-}
+};
 
 export default Cabecera
+

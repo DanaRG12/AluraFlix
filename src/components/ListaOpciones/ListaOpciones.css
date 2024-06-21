@@ -4,14 +4,16 @@
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 8px;
+    color: #ffff
 }
 
 .lista-opciones select{
     width: 100%;
-    background-color: #ffffff;
+    background-color: #0000;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     padding: 24px;
-    border: none;
-    outline-color: #6278F7;
+    border-color: white;
+    border-radius: 15px;
+    outline-color: red;
     font-size: 16px;
 }

@@ -1,19 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components"
 import { useState } from "react";
 import CampoTexto from "../../CampoTexto"; 
 import ListaOpciones from "../../ListaOpciones"; 
 import Boton from "../../Boton"; 
-//crear conecion con app
-
-const formulario = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-`;
+import "./NuevoVideo.css"
 
 const NuevoVideo = () => {
 
@@ -40,7 +31,7 @@ const NuevoVideo = () => {
       return ( 
       <section className="NuevoVideo">
         <form onSubmit={manejarEnvio}>
-            <h2>Nuevo Video</h2>
+            <h2>NUEVO VIDEO</h2>
             <h3>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VIDEO</h3>
             <h4>Crear Tarjeta</h4>
             <CampoTexto

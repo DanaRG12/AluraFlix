@@ -1,0 +1,35 @@
+.NuevoVideo{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+    background-color: black;
+}
+
+.NuevoVideo form{
+    max-width: 80%;
+    background-color: #0a0a0a;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 25%);
+    border-radius: 20px;
+    padding: 8px 100px;
+}
+
+.NuevoVideo h2{
+    font-size: 52px;
+    font-weight: 800;
+    color: #ffff;
+    text-align: center;
+}
+
+.NuevoVideo h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffff;
+    text-align: center;
+}
+
+.NuevoVideo h4{
+    font-size: 32px;
+    font-weight: 400;
+    color: #ffff;
+    text-align:left;
+};
