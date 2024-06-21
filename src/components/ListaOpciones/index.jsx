@@ -1,7 +1,7 @@
 import "./ListaOpciones.css"
 
 const ListaOpciones = (props) => {
-    const equipos = [
+    const categorias = [
         "Front End",
         "Backend",
         "Innovación y Gestión"
@@ -16,7 +16,7 @@ const ListaOpciones = (props) => {
         <label>Categoría</label>
         <select value={props.valor} onChange={manejarCambio}>
             <option value="" disabled defaultValue="" hidden>Seleccionar una categoría</option>
-            {equipos.map((equipo, index) => <option key={index} value={equipo}>{equipo}</option>)}
+            {categorias.map((categorias, index) => <option key={index} value={categorias}>{categorias}</option>)}
         </select>
     </div>
 }

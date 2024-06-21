@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 
-//poner la card del tamaño correcto y linea negra
+// linea negra
 
 const CardContainer = styled.div`
   display: flex;
@@ -36,17 +36,17 @@ const CardStyle = styled.div`
   }
 
   .editar {
-    width: 35px; /* Ajuste del ancho para que sea igual a eliminar */
+    width: 35px;
     position: absolute;
-    right: 125px; /* Corrección del valor para alinearlo a la derecha */
-    top: 205px; /* Posicionamiento superior */
+    right: 125px;
+    top: 205px;
   }
 
   .eliminar {
     width: 35px;
     position: absolute;
-    left: 5px; /* Corrección del valor para alinearlo a la izquierda */
-    top: 205px; /* Posicionamiento superior */
+    left: 5px;
+    top: 205px;
   }
 
   h5 {
@@ -60,7 +60,7 @@ const CardStyle = styled.div`
   h6 {
     font-size: 15px;
     position: absolute;
-    right: 5px;
+    left: 237px;
     bottom: -7px;
     color: #ffff;
   }

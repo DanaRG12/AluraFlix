@@ -32,13 +32,13 @@ const NavLink = styled(Link)`
 
   &.active {
     background-color: #000000;
-    color: #ffff;
+    color: #ffffff;
     border: solid blue
   }
 
   &:hover {
-    background-color: #fff;
-    color: #282c34;
+    background-color: #0a2a9e;
+    color: #f0f0f1;
   }
 `;
 

@@ -6,6 +6,7 @@ import Home from './components/Pages/Home';
 import NuevoVideo from './components/Pages/NuevoVideo';
 import Cabecera from "./components/Cabecera"
 import Footer from './components/Footer'
+import Editar from './components/Modal/Editar';
 
 //import Editar from "./components/Modal/Editar";
 
@@ -34,7 +35,7 @@ function App() {
  
       </Router>
     <Footer/>
-    
+    <Editar/>
     </FondoGradiente>
     </>
   )
