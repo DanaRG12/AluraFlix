@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import ListaOpciones from "../ListaOpciones";
 import CampoTexto from "../CampoTexto";
 import Boton from "../Boton";
+import Card from "../Card";
+
+//open modal con boton editar
 
 
 const Overlay = styled.div`
@@ -69,7 +72,7 @@ const FormContainer = styled.form`
   input, textarea, select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #fffff;
+    border: 1px solid #ffff;
   }
 
   .boton-container {
@@ -172,7 +175,7 @@ const Editar = () => {
 
   return (
     <div>
-      <button1 onClick={openModal}>Open Modal</button1>
+      <editarVideo onClick={openModal}>Open Modal</editarVideo>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h2>EDITAR CARD:</h2>
         <Form onSubmit={handleFormSubmit} />

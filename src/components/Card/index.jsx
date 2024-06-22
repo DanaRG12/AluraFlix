@@ -28,42 +28,27 @@ const CardStyle = styled.div`
   margin-bottom: 24px;
   position: relative;
 
-  img {
-    width: 100px;
-    border-radius: 50%;
-    position: relative;
-    bottom: -50px;
+  .negro {
+    background-color: black;
   }
 
   .editar {
-    width: 35px;
+    width: 135px;
     position: absolute;
-    right: 125px;
-    top: 205px;
+    right: 5px;
+    top: 238px;
+    cursor: pointer
   }
 
   .eliminar {
-    width: 35px;
+    width: 135px;
     position: absolute;
     left: 5px;
-    top: 205px;
+    top: 238px;
+    cursor: pointer
   }
 
-  h5 {
-    font-size: 15px;
-    position: absolute;
-    left: 55px;
-    bottom: 1px;
-    color: #ffff;
-  }
 
-  h6 {
-    font-size: 15px;
-    position: absolute;
-    left: 237px;
-    bottom: -7px;
-    color: #ffff;
-  }
 `;
 const Card = (props) => {
   const { colorPrimario, eliminarVideo, editarVideo, imagen, titulo, id } = props;
@@ -75,10 +60,11 @@ const Card = (props) => {
         <CardStyle style={{ backgroundColor: colorPrimario }}>
         <img src={imagen} alt={titulo} />
         <div className="info">
-            <h5>BORRAR</h5>
-            <h6>EDITAR</h6></div>
+            </div>
+            <div className="negro">
         <img src="src/img/Editar.png" alt="Editar" className="editar" onClick={() => editarVideo(id)} />
         <img src="src/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
+            </div>
         </CardStyle>
 
       <img src="src/img/BackEnd.png" alt="Backend" />
