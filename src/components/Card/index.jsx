@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-
-// linea negra
+import Boton from "../Boton";
 
 const CardContainer = styled.div`
   display: flex;
@@ -22,55 +21,45 @@ const CardStyle = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 120px;
+  padding: 100px;
   border-radius: 10px;
-  width: 100px;
+  width: 150px;
   margin-bottom: 24px;
   position: relative;
 
   .negro {
     background-color: black;
+    border-color: none;
   }
 
   .editar {
     width: 135px;
     position: absolute;
     right: 5px;
-    top: 238px;
-    cursor: pointer
+    top: 198px;
+    cursor: pointer;
   }
 
   .eliminar {
     width: 135px;
     position: absolute;
     left: 5px;
-    top: 238px;
-    cursor: pointer
+    top: 198px;
+    cursor: pointer;
   }
-
-
 `;
-const Card = (props) => {
-  const { colorPrimario, eliminarVideo, editarVideo, imagen, titulo, id } = props;
 
+const Card = ({ colorPrimario, eliminarVideo, imagen, titulo, id, openModal }) => {
   return (
     <CardContainer>
-      <img src="src/img/FrontEnd.png" alt="Frontend" />
-
-        <CardStyle style={{ backgroundColor: colorPrimario }}>
+      <CardStyle style={{ backgroundColor: colorPrimario }}>
         <img src={imagen} alt={titulo} />
-        <div className="info">
-            </div>
-            <div className="negro">
-        <img src="src/img/Editar.png" alt="Editar" className="editar" onClick={() => editarVideo(id)} />
-        <img src="src/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
-            </div>
-        </CardStyle>
-
-      <img src="src/img/BackEnd.png" alt="Backend" />
-        <CardStyle>CardStyle 2</CardStyle>
-      <img src="src/img/Innova.png" alt="Innovación y gestión" />
-        <CardStyle>CardStyle 3</CardStyle>
+        <div className="info"></div>
+        <div className="negro">        
+          <img src="src/img/Editar.png" alt="Editar" className="editar" onClick={openModal} />
+          <img src="src/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
+        </div>
+      </CardStyle>
     </CardContainer>
   );
 };

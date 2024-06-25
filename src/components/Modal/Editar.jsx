@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import ListaOpciones from "../ListaOpciones";
 import CampoTexto from "../CampoTexto";
 import Boton from "../Boton";
-import Card from "../Card";
-
-//open modal con boton editar
-
 
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
@@ -39,8 +35,9 @@ const DialogEstilizado = styled.div`
     cursor: pointer;
     color: white;
   }
-  h2{
-    color:#ffff;
+
+  h2 {
+    color: #fff;
   }
 `;
 
@@ -72,7 +69,7 @@ const FormContainer = styled.form`
   input, textarea, select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ffff;
+    border: 1px solid #fff;
   }
 
   .boton-container {
@@ -80,7 +77,6 @@ const FormContainer = styled.form`
     gap: 16%;
     justify-content: flex-end;
   }
-
 `;
 
 const Form = ({ onSubmit }) => {
@@ -157,17 +153,7 @@ const Form = ({ onSubmit }) => {
   );
 };
 
-const Editar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
+const Editar = ({ openModal, isModalOpen, closeModal }) => {
   const handleFormSubmit = (formData) => {
     console.log('Form submitted:', formData);
     closeModal();
@@ -175,7 +161,6 @@ const Editar = () => {
 
   return (
     <div>
-      <editarVideo onClick={openModal}>Open Modal</editarVideo>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h2>EDITAR CARD:</h2>
         <Form onSubmit={handleFormSubmit} />
