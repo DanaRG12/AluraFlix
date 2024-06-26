@@ -2,7 +2,7 @@ import "./ListaOpciones.css"
 
 const ListaOpciones = (props) => {
     const categorias = [
-        "Front End",
+        "Frontend",
         "Backend",
         "Innovación y Gestión"
     ]

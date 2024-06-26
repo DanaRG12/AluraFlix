@@ -16,6 +16,21 @@ const FondoGradiente = styled.div`
   min-height: 100vh;
 `;
 
+const videos = [
+  {
+    categoria: "Frontend",
+    colorPrimario: "#3498db"
+  },
+  {
+    categoria: "Backend",
+    colorPrimario: "#2ecc71"
+  },
+  {
+    categoria: "Innovación y Gestión",
+    colorPrimario: "#e74c3c"
+  },
+];
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videos, setVideos] = useState([]);

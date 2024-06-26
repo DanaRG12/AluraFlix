@@ -13,11 +13,13 @@ Modal info: https://app.aluracursos.com/course/react-styled-components-manipulan
 
 https://github.com/alura-es-cursos/2069-space-app/tree/aula3/src/components/Titulo
 https://github.com/alura-es-cursos/alura-cinema/blob/aula3/src/components/Card/index.js
+https://github.com/alura-es-cursos/1950-react-desarrollando-con-js/blob/clase09/src/App.js#L12
 https://chatgpt.com/c/a21c235a-f624-4579-be99-ff6057db964c
 https://www.figma.com/design/Bo9in2KW43zPZj4AZS2LNH/New-AluraFlix---ESP-(Copy)?node-id=18759-221&t=LBtFYRuGliLiAie6-0
 https://trello.com/c/6LmNc41T/7-desarrollo-del-modal-en-react
+https://github.com/Mariq12/challenge-aluraflix/blob/master/src/components/category/Category.jsx
 
-acomodar cards
-colores
-borrar 
-jV
+
+acomodar cards colores
+borrar card extra
+titulos card

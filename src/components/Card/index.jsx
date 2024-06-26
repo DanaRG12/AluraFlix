@@ -21,7 +21,7 @@ const CardContainer = styled.div`
 `;
 
 const CardStyle = styled.div`
-  background: linear-gradient(45deg, rgba(0, 212, 255, 1) 0%, rgba(11, 3, 45, 1) 100%);
+  background: var(--colorPrimario);
   align-items: center;
   //padding: 85px;
   border-radius: 10px;
