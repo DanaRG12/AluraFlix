@@ -16,3 +16,8 @@ https://github.com/alura-es-cursos/alura-cinema/blob/aula3/src/components/Card/i
 https://chatgpt.com/c/a21c235a-f624-4579-be99-ff6057db964c
 https://www.figma.com/design/Bo9in2KW43zPZj4AZS2LNH/New-AluraFlix---ESP-(Copy)?node-id=18759-221&t=LBtFYRuGliLiAie6-0
 https://trello.com/c/6LmNc41T/7-desarrollo-del-modal-en-react
+
+acomodar cards
+colores
+borrar 
+jV

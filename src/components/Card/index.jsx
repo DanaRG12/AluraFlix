@@ -1,57 +1,68 @@
 import styled from "styled-components";
 import React from "react";
-import Boton from "../Boton";
 
 const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    display: flex;
+    width: 35rem;
+    height: 25rem;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
 
   img {
-    width: 35%;
-    align-self: flex-start;
+    aspect-ratio: 1/1;
+    width: 395px;
+    height: 300px;
+    background-color: var(--colorPrimario);
+    border-radius: 20px 20px 0 0;
+      
   }
 `;
 
 const CardStyle = styled.div`
   background: linear-gradient(45deg, rgba(0, 212, 255, 1) 0%, rgba(11, 3, 45, 1) 100%);
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 100px;
+  //padding: 85px;
   border-radius: 10px;
-  width: 150px;
-  margin-bottom: 24px;
-  position: relative;
-
-  .negro {
-    background-color: black;
-    border-color: none;
-  }
-
+  //width: 230px;
+ height: 350px;
+  //margin-bottom: 4px;
+  //top: 15rem;
+  //position: relative;
+ //display: flex;
+  flex-direction: column;
+ 
   .editar {
-    width: 135px;
-    position: absolute;
-    right: 5px;
-    top: 198px;
+    //object-fit: cover; 
+    //max-width: 10%;
+    //aspect-ratio: auto;
+    //position: absolute;
+    //right: 10%;
+    //top: 198px;
+    width: 185px;
+    height: 50px;
+    left: 10px;
+   // top: 188px;
     cursor: pointer;
   }
 
   .eliminar {
-    width: 135px;
-    position: absolute;
-    left: 5px;
-    top: 198px;
+    width: 185px;
+    height: 50px;
+    left: 10px;
+    //top: 188px;
     cursor: pointer;
   }
+  //.negro {
+   // background-color: black;
+   // border-color: none;
+  //}
 `;
 
 const Card = ({ colorPrimario, eliminarVideo, imagen, titulo, id, openModal }) => {
   return (
-    <CardContainer>
+  <CardContainer>
       <CardStyle style={{ backgroundColor: colorPrimario }}>
         <img src={imagen} alt={titulo} />
         <div className="info"></div>
@@ -59,8 +70,8 @@ const Card = ({ colorPrimario, eliminarVideo, imagen, titulo, id, openModal }) =
           <img src="src/img/Editar.png" alt="Editar" className="editar" onClick={openModal} />
           <img src="src/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
         </div>
-      </CardStyle>
-    </CardContainer>
+  </CardStyle>
+   </CardContainer>
   );
 };
 

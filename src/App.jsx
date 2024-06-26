@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import styled from "styled-components";
+import api from './api';
+import Card from './components/Card';
 import GlobalStyles from "./components/GlobalStyles";
 import Home from './components/Pages/Home';
 import NuevoVideo from './components/Pages/NuevoVideo';
 import Cabecera from "./components/Cabecera";
 import Footer from './components/Footer';
 import Editar from './components/Modal/Editar';
-import Card from './components/Card';
 
 const FondoGradiente = styled.div`
   background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -17,7 +18,17 @@ const FondoGradiente = styled.div`
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [actualizarVideo] = useState();
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    api.get('')
+      .then(response => {
+        setVideos(response.data);
+      })
+      .catch(error => {
+        console.error('Error al cargar los datos:', error);
+      });
+  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -33,18 +44,8 @@ function App() {
   };
 
   const eliminarVideo = (id) => {
-    console.log('Eliminar video con id:', id)
-    const nuevoVideos = videos.filter((video) => video.id !== id)
-
-    ;
+    console.log('Eliminar video con id:', id);
   };
-
-  // Suponiendo que tienes una lista de cards para mostrar
-  const cardsData = [
-    { id: 1, colorPrimario: '#3498db', imagen: 'src/img/Frontend.png', titulo: 'Frontend' },
-    { id: 2, colorPrimario: '#2ecc71', imagen: 'src/img/Backend.png', titulo: 'Backend' },
-    { id: 3, colorPrimario: '#e74c3c', imagen: 'src/img/Innova.png', titulo: 'Innovación y gestión' },
-  ];
 
   return (
     <>
@@ -58,21 +59,20 @@ function App() {
           </Routes>
         </Router>
         
-        {cardsData.map(card => (
+
+        {videos.map(video => (
           <Card
-            key={card.id}
-            id={card.id}
-            colorPrimario={card.colorPrimario}
-            imagen={card.imagen}
-            titulo={card.titulo}
+            key={video.id}
+            id={video.id}
+            colorPrimario={video.categoria === 'Frontend' ? '#3498db' : video.categoria === 'Backend' ? '#2ecc71' : '#e74c3c'}
+            imagen={video.imagen}
+            titulo={video.titulo}
             openModal={openModal}
             eliminarVideo={eliminarVideo}
           />
         ))}
-        <Editar isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />
-
-
-          <Footer />
+              <Editar isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />
+      <Footer />
       </FondoGradiente>
     </>
   );
