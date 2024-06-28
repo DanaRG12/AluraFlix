@@ -73,7 +73,7 @@ const Form = ({ onSubmit }) => {
         required
         valor={formData.categoria}
         actualizarValor={handleChange}
-      />
+      />   
       <CampoTexto
         titulo="Imagen"
         name="imagen"

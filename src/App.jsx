@@ -10,27 +10,14 @@ import Cabecera from "./components/Cabecera";
 import Footer from './components/Footer';
 import Editar from './components/Modal/Editar';
 
+
 const FondoGradiente = styled.div`
   background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
   width: 100%;
   min-height: 100vh;
 `;
 
-const videos = [
-  {
-    categoria: "Frontend",
-    colorPrimario: "#3498db"
-  },
-  {
-    categoria: "Backend",
-    colorPrimario: "#2ecc71"
-  },
-  {
-    categoria: "Innovación y Gestión",
-    colorPrimario: "#e74c3c"
-  },
-];
-
+//abrir modal 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videos, setVideos] = useState([]);
@@ -57,10 +44,11 @@ function App() {
     console.log('Form submitted:', formData);
     closeModal();
   };
-
+//boton borrar que elimina desde la card 
   const eliminarVideo = (id) => {
+    setVideos(prevVideos => prevVideos.filter(video => video.id !== id));
     console.log('Eliminar video con id:', id);
-  };
+  }
 
   return (
     <>
@@ -73,9 +61,11 @@ function App() {
             <Route path="/NuevoVideo" element={<NuevoVideo />} />
           </Routes>
         </Router>
-        
 
-        {videos.map(video => (
+
+
+
+        {videos.map((video) => (
           <Card
             key={video.id}
             id={video.id}
@@ -86,6 +76,7 @@ function App() {
             eliminarVideo={eliminarVideo}
           />
         ))}
+          
               <Editar isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />
       <Footer />
       </FondoGradiente>
