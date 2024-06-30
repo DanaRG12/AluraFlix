@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
-
 const GlobalStyles= createGlobalStyle`
     html {
     line-height: 1.15; 
@@ -16,7 +14,7 @@ const GlobalStyles= createGlobalStyle`
     display: block;
   }
   h1 {
-    font-size: 2em;
+   // font-size: 2em;
     margin: 0.67em 0;
   }
   hr {
@@ -40,14 +38,14 @@ const GlobalStyles= createGlobalStyle`
   kbd,
   samp {
     font-family: monospace, monospace; 
-    font-size: 1em; 
+    //font-size: 1em; 
   }
   small {
     font-size: 80%;
   }
   sub,
   sup {
-    font-size: 75%;
+    //font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;

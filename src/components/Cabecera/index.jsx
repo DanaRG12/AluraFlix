@@ -14,11 +14,27 @@ const HeaderEstilizado = styled.header`
     img{
         width: 212px;
     }
+    @media (max-width: 600px) {
+      HeaderEstilizado {
+        max-width:50%;
+      img{
+        width: 50%;
+        padding-right:2px;
+      }}
+
+}
 `
 
 const Nav = styled.nav`
   display: flex;
   gap: 20px;
+
+  @media (max-width: 600px) {
+    Nav {
+        max-width: 10%;
+        ;
+    }
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -39,6 +55,12 @@ const NavLink = styled(Link)`
   &:hover {
     background-color: #0a2a9e;
     color: #f0f0f1;
+  }
+  @media (max-width: 600px) {
+    NavLink {
+        max-width: 10%;
+        font-size: 5px;
+    }
   }
 `;
 

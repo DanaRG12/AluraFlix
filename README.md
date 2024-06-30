@@ -22,8 +22,8 @@ Diana Robles Guerrero
 To Do List:
 
 acomodar card flexbox y diseño cards
+    probar carrusel
+    probar borrar todos los estilos de globla
 bd nueva
 hacer que al clik en la card te abra el video
-
-cuando seleccionas en nuevo video no agarra lista opcion
 responsivo

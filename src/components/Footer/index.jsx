@@ -16,6 +16,13 @@ const FooterEstilizado = styled.footer`
     img{
         width: 212px;
     }
+    @media (max-width: 600px) {
+        FooterEstilizado {
+        max-width: 20%;
+        display: flex;
+        justify-content: center;
+        font-size:9px;
+    }}
 `
 
     const Footer = () => {

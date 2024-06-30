@@ -25,6 +25,14 @@ const CategoriaTitulo = styled.img`
   width: 400px;  
   height: auto;
   margin-bottom: 5px;
+
+  @media (max-width: 600px) {
+    CategoriaTitulo {
+        max-width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } }
 `;
 
 //para abrir modal de editar
