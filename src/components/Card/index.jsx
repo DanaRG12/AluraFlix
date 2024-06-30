@@ -61,6 +61,14 @@ const CardStyle = styled.div`
 `;
 
 const Card = ({ colorPrimario, eliminarVideo, imagen, titulo, id, openModal }) => {
+  const handleEditClick = () => {
+    openModal({
+      id,
+      titulo,
+      imagen,
+      colorPrimario
+    });
+  };
   return (
   <CardContainer>
       <CardStyle style={{ backgroundColor: colorPrimario }}>

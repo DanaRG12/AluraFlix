@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const ClaseSeccion = styled.section`
+//no funciona
+const agruparPorCategoria  = styled.section`
   margin: 20px 0;
   text-align: center;
   background-color: ${({ color }) => color};

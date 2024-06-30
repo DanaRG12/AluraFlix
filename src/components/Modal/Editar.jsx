@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ListaOpciones from "../ListaOpciones";
 import CampoTexto from "../CampoTexto";
 import Boton from "../Boton";
+import api from '../../api';
 
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
@@ -79,7 +80,7 @@ const FormContainer = styled.form`
   }
 `;
 
-const Form = ({ onSubmit }) => {
+const Form = ({ onSubmit, initialValues  }) => {
   const [formData, setFormData] = useState({
     titulo: '',
     categoria: '',
@@ -87,6 +88,12 @@ const Form = ({ onSubmit }) => {
     video: '',
     descripcion: '',
   });
+
+  useEffect(() => {
+    if (initialValues) {
+      setFormData(initialValues);
+    }
+  }, [initialValues]);
 
   const handleChange = (name, value) => {
     setFormData({
@@ -153,17 +160,25 @@ const Form = ({ onSubmit }) => {
   );
 };
 
-const Editar = ({ openModal, isModalOpen, closeModal }) => {
+
+const Editar = ({ isModalOpen, closeModal, videoData, updateVideo }) => {
   const handleFormSubmit = (formData) => {
-    console.log('Form submitted:', formData);
-    closeModal();
+    api.put(`/${videoData.id}`, formData)
+      .then(response => {
+        console.log('Video actualizado:', response.data);
+        updateVideo(response.data);
+        closeModal();
+      })
+      .catch(error => {
+        console.error('Error al actualizar el video:', error);
+      });
   };
 
   return (
     <div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h2>EDITAR CARD:</h2>
-        <Form onSubmit={handleFormSubmit} />
+        <Form onSubmit={handleFormSubmit} initialValues={videoData} />
       </Modal>
     </div>
   );

@@ -20,6 +20,9 @@ https://trello.com/c/6LmNc41T/7-desarrollo-del-modal-en-react
 https://github.com/Mariq12/challenge-aluraflix/blob/master/src/components/category/Category.jsx
 
 
-acomodar cards colores
 borrar card extra
-titulos card
+acomodar card flexbox y diseño cards
+bd nueva
+lista opciones
+limpiar formulario y nuevo video
+checar ""

@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components"
 import { useState } from "react";
 import CampoTexto from "../../CampoTexto"; 
-import ListaOpciones from "../../ListaOpciones"; 
+import ListaOpciones from "../../ListaOpciones";
+import api from "../../../api"; 
 import Boton from "../../Boton"; 
 import "./NuevoVideo.css"
 
@@ -14,19 +15,34 @@ const NuevoVideo = () => {
     const [video, actualizarVideo] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
 
+    const limpiarFormulario = () => {
+        actualizarTitulo("");
+        actualizarCategoria("");
+        actualizarImagen("");
+        actualizarVideo("");
+        actualizarDescripcion("");
+    };
+
     const manejarEnvio = (e) => {
         e.preventDefault()
-        console.log("Manejar el envio")
-        let datosAEnviar = {
-            titulo,
-            categoria,
-            imagen,
-            video,
-            descripcion
+               let datosAEnviar = {
+                 titulo,
+                 categoria,
+                 imagen,
+                 video,
+                 descripcion
         }
         console.log(datosAEnviar)
-    }
 
+api.post('', datosAEnviar)
+    .then(response => {
+        console.log('Video creado:', response.data);
+       
+    })
+    .catch(error => {
+        console.error('Error al crear el video:', error);
+    });
+};
 
       return ( 
       <section className="NuevoVideo">
@@ -73,7 +89,7 @@ const NuevoVideo = () => {
             <Boton>
                 Guardar
             </Boton>
-            <Boton>
+            <Boton type="button" onClick={limpiarFormulario}>
                 Limpiar
             </Boton>
         </form>

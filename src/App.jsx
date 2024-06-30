@@ -31,6 +31,7 @@ const CategoriaTitulo = styled.img`
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videos, setVideos] = useState([]);
+  const [videoData, setVideoData] = useState(null);
 
   useEffect(() => {
     api.get('')
@@ -42,26 +43,33 @@ function App() {
       });
   }, []);
 
-  const openModal = () => {
+  const openModal = (video) => {
+    setVideoData(video);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false)
+    setVideoData(null);
   };
 
   const handleFormSubmit = (formData) => {
-    console.log('Form submitted:', formData);
+    console.log('manejo de dats: ', formData);
     closeModal();
   };
+
+
 //boton borrar que elimina desde la card 
   const eliminarVideo = (id) => {
     setVideos(prevVideos => prevVideos.filter(video => video.id !== id));
     console.log('Eliminar video con id:', id);
-  }
+  
+  };
+  const updateVideo = (updatedVideo) => {
+    setVideos(prevVideos => prevVideos.map(video => (video.id === updatedVideo.id ? updatedVideo : video)));
+  };
+
 //para el titulo de las categorias de las cards
-
-
 const agruparPorCategoria = (videos) => {
   return videos.reduce((acc, video) => {
     const { categoria } = video;
@@ -76,7 +84,7 @@ const categoriasAgrupadas = agruparPorCategoria(videos);
 const categoriaImagenes = {
   Frontend: FrontEnd,
   Backend: BackEnd,
-  'Innovación y Gestión': Innova,}
+  'Innovación y Gestión': Innova,};
 
 
 
@@ -111,7 +119,7 @@ const categoriaImagenes = {
                     }
                   imagen={video.imagen}
                   titulo={video.titulo}
-                  openModal={openModal}
+                  openModal={() => openModal(video)}
                   eliminarVideo={eliminarVideo}
                 />
               ))}
@@ -119,7 +127,11 @@ const categoriaImagenes = {
           </div>
         ))}
 
-        <Editar isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />
+        <Editar   
+          isModalOpen={isModalOpen}
+          closeModal={closeModal}
+          videoData={videoData}
+          updateVideo={updateVideo} />
         <Footer />
       </FondoGradiente>
     </>
