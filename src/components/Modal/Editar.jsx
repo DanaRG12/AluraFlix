@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ListaOpciones from "../ListaOpciones";
 import CampoTexto from "../CampoTexto";
 import Boton from "../Boton";
-import api from '../../api';
+import api from "../../api";
 
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
@@ -124,7 +124,7 @@ const Form = ({ onSubmit, initialValues  }) => {
       <label>
         <ListaOpciones 
           valor={formData.categoria} 
-          actualizarEquipo={(categoria) => handleChange('categoria', categoria)} 
+          actualizarValor={(categoria) => handleChange('categoria', categoria)} 
         />
       </label>
 

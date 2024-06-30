@@ -83,7 +83,7 @@
     {
       "id": "f265",
       "titulo": "dsghjdsf",
-      "categoria": "",
+      "categoria": "Innovación y Gestión",
       "imagen": "https://www.axondigital.mx/wp-content/uploads/2018/12/seo_google_youtube.jpg",
       "video": "https://youtu.be/wDjeBNv6ip0?si=XOuL_n06ocNs_qKc",
       "descripcion": "vbnvj"
@@ -91,10 +91,26 @@
     {
       "id": "b1af",
       "titulo": "El card de la cama",
-      "categoria": "Backend",
+      "categoria": "Innovación y Gestión",
       "imagen": "https://m.media-amazon.com/images/I/71GHuGZyWHL.jpg",
       "video": "https://youtu.be/6PIWzQnapnc?si=BS_TqlciUEEKtmc7",
       "descripcion": "tengo un chingo de sueño"
+    },
+    {
+      "id": "099e",
+      "titulo": "abc",
+      "categoria": "Innovación y Gestión",
+      "imagen": "abc",
+      "video": "abc",
+      "descripcion": "abc"
+    },
+    {
+      "id": "c28c",
+      "titulo": "fgh",
+      "categoria": "Innovación y Gestión",
+      "imagen": "fgh",
+      "video": "fgh",
+      "descripcion": "fgh"
     }
   ]
 }

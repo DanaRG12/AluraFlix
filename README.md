@@ -1,28 +1,29 @@
-# React + Vite
+<h1> Challenge Aluraflix. </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta ocasión el challenge trata de la creación de una plataforma de gestión de videos donde podemos agregar nuevos videos, editar su descripción o actualizarlo, eliminarlos y clasificarlos en tres grupos de manera dinámica.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-To Do:
-
-Modal info: https://app.aluracursos.com/course/react-styled-components-manipulando-archivos-estaticos/task/87472
-
-https://github.com/alura-es-cursos/2069-space-app/tree/aula3/src/components/Titulo
-https://github.com/alura-es-cursos/alura-cinema/blob/aula3/src/components/Card/index.js
-https://github.com/alura-es-cursos/1950-react-desarrollando-con-js/blob/clase09/src/App.js#L12
-https://chatgpt.com/c/a21c235a-f624-4579-be99-ff6057db964c
-https://www.figma.com/design/Bo9in2KW43zPZj4AZS2LNH/New-AluraFlix---ESP-(Copy)?node-id=18759-221&t=LBtFYRuGliLiAie6-0
-https://trello.com/c/6LmNc41T/7-desarrollo-del-modal-en-react
-https://github.com/Mariq12/challenge-aluraflix/blob/master/src/components/category/Category.jsx
+Para ejecutarlo puede dar clic al siguiente link donde lo podrá visualizar como demo,
 
 
-borrar card extra
+El siguiente es el link desde donde se encuentra la database:
+
+
+Para llevar acabo este challenge se utilizó lo aprendido en las clases de React asi como el uso de las paqueterías ya aprendidas previamente para gestionar api, y nuevas como styled-components, react-router-dom y nuevos Hooks.
+Desgraciadamente no he podido sintetizar mi código al mínimo, ni he creado carpetas para cada componente, solo he puesto las que en su momento me fueron necesarias.
+Agradezco a Alura Latam por el basto aprendizaje y esperemos poder continuar con este camino tan bello del Frontend. Me encuentro bastante contenta con poder ver materializado el aprendizaje adquirido.
+¡Muchas gracias por leer!
+
+Diana Robles Guerrero
+
+
+
+
+
+To Do List:
+
 acomodar card flexbox y diseño cards
 bd nueva
-lista opciones
-limpiar formulario y nuevo video
-checar ""
+hacer que al clik en la card te abra el video
+
+cuando seleccionas en nuevo video no agarra lista opcion
+responsivo

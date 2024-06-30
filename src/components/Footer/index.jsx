@@ -25,7 +25,7 @@ const FooterEstilizado = styled.footer`
         <></>
         <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
         <h1>
-        Desarrollado para Alura 
+        Desarrollado para Alura Latam
                 <p>
         por Diana Robles Guerrero
                 </p>

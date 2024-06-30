@@ -7,20 +7,19 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2px;
     text-align: center;
 `;
 
 const Image = styled.img`
-    width: 85%; 
-    margin-bottom: 20px;
+    width: 100%; 
+    margin-bottom: 1px;
 `;
 
 const Home = () => {
   return (
       <HomeContainer>
           <Image src="src\img\BannerMain.png" alt="Bannere" />
-          <Card/>
       </HomeContainer>
   );
 }

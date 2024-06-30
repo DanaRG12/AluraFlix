@@ -37,7 +37,7 @@ const NuevoVideo = () => {
 api.post('', datosAEnviar)
     .then(response => {
         console.log('Video creado:', response.data);
-       
+       limpiarFormulario()
     })
     .catch(error => {
         console.error('Error al crear el video:', error);
