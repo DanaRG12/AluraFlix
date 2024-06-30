@@ -9,9 +9,10 @@ import NuevoVideo from "./components/Pages/NuevoVideo";
 import Cabecera from "./components/Cabecera";
 import Footer from "./components/Footer";
 import Editar from "./components/Modal/Editar";
-import FrontEnd from "./img/FrontEnd.png";
-import BackEnd from "./img/BackEnd.png";
-import Innova from "./img/Innova.png";
+import FrontEnd from "/img/FrontEnd.png";
+import BackEnd from "/img/BackEnd.png";
+import Innova from "/img/Innova.png";
+
 
 //color el fondo degradado
 const FondoGradiente = styled.div`

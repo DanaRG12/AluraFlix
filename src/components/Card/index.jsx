@@ -70,8 +70,8 @@ const Card = ({ colorPrimario, eliminarVideo, imagen, titulo, id, openModal }) =
         <div className="info"></div>
         <div className="negro">        
 
-          <img src="src/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
-          <img src="src/img/Editar.png" alt="Editar" className="editar" onClick={openModal} />
+          <img src="/img/Delete.png" alt="Eliminar" className="eliminar" onClick={() => eliminarVideo(id)} />
+          <img src="/img/Editar.png" alt="Editar" className="editar" onClick={openModal} />
         </div>
   </CardStyle>
    </CardContainer>

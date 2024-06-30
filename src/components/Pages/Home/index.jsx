@@ -19,7 +19,7 @@ const Image = styled.img`
 const Home = () => {
   return (
       <HomeContainer>
-          <Image src="src\img\BannerMain.png" alt="Bannere" />
+          <Image src="img\BannerMain.png" alt="Bannere" />
       </HomeContainer>
   );
 }

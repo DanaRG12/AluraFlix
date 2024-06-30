@@ -71,7 +71,7 @@ const Cabecera = () => {
 
     <HeaderEstilizado>
    
-     <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
+     <img src="\img\LogoMain.png" alt="logo aluraFix"/>
  
               <Nav>
           <NavLink to="/">Home</NavLink>
