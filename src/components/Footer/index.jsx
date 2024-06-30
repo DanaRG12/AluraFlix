@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import LogoMain from "./img/LogoMain.png";
 
 const FooterEstilizado = styled.footer`
     background-color: #000;
@@ -30,7 +31,7 @@ const FooterEstilizado = styled.footer`
             
     <FooterEstilizado>
         <></>
-        <img src="src\img\LogoMain.png" alt="logo aluraFix"/>
+        <img src={LogoMain} alt="logo aluraFix"/>
         <h1>
         Desarrollado para Alura Latam
                 <p>

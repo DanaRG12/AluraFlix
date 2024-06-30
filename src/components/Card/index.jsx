@@ -7,14 +7,12 @@ const CardContainer = styled.div`
     box-sizing: border-box; 
     padding: 10px; 
 
-
     img {
       width: 98%;
         height: 85%;
         margin-top: 3px;
         border-radius: 10px 10px 0 0;
-      
-  }
+        }
 `;
 
 const CardStyle = styled.div`
