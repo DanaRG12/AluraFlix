@@ -8,7 +8,7 @@ Para ejecutarlo puede dar clic al siguiente link donde lo podrá visualizar como
 
 se requiere ejecutar de manera local la data base para ejecutar las cards, pregunté en discord como ponerlo y me dieron la opcion de my-json-server este es el link
 
-https://github.com/DanaRG12/AluraFlix/blob/[main|master]/db.json
+https://my-json-server.typicode.com/DanaRG12/AluraFlix/videos
 
 en aluraGeek lo hice mediante una api fake pero ahora me pide pago para levantar otro proyecto. Gracias por comprender.
 
